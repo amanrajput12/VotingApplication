@@ -1,10 +1,10 @@
 
 import {configureStore } from "@reduxjs/toolkit"
-import VotingPannel from "../Admin/VotingPannel"
+import VotingPanelSlice from "./VotingPanelSlice"
 
 const Store =  configureStore({
     reducer:{
-        voting:VotingPannel
+        voting:VotingPanelSlice
     }
 })
 

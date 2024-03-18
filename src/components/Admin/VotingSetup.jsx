@@ -1,11 +1,14 @@
-import React from 'react'
-import VotingPannel from './VotingPannel'
+import React, { useState } from 'react'
+
+import { Outlet } from 'react-router-dom'
 
 
 const VotingSetup = () => {
+ 
   return (
     <div>
-     <VotingPannel/>
+     vote
+     <Outlet/>
     </div>
   )
 }

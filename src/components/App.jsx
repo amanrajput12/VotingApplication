@@ -1,11 +1,11 @@
 import { useState } from 'react'
 
 import './App.css'
-import { Outlet } from 'react-router-dom'
 
+import { Outlet } from 'react-router-dom'
 function App() {
   const [count, setCount] = useState(0)
-
+    console.log("count",count);
   return (
     <>
       <h2 className='bg-gray-950 text-pink-300'>Hello</h2>

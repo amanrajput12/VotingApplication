@@ -9,6 +9,8 @@ import Register from './components/Register.jsx'
 import VotingSetup from './components/Admin/VotingSetup.jsx'
 import Store from './components/utils/Store.js'
 
+import Votingoption from './components/Admin/Votingoption.jsx'
+
  const route = createBrowserRouter([
   {
     path:"/",
@@ -23,8 +25,14 @@ import Store from './components/utils/Store.js'
         element:<Register/>
       },
       {
-        path:"/voting",
-        element:<VotingSetup/>
+        path:"/vote",
+        element:<VotingSetup/>,
+        children:[
+          {
+            path:"addvote",
+            element:<Votingoption/>
+          }
+        ]
       }
     ]
   }
@@ -32,10 +40,12 @@ import Store from './components/utils/Store.js'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 
- <Provider store={Store}>
+    <Provider store={Store}>
   <RouterProvider router={route}>
     <App />
     </RouterProvider>
     </Provider>
 
 )
+
+

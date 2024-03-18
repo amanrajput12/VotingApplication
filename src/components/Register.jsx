@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Register = () => {
+  const [data]= useState(0)
   return (
     <div className='flex w-full items-center h-screen  bg-indigo-900'>
     <div className='flex justify-center bg-violet-200 border-2  opacity-55  border-black  w-[50vw] h-96 rounded-lg items-center mx-auto' >

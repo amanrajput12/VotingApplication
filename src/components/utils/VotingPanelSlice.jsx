@@ -5,11 +5,13 @@ import { createSlice } from "@reduxjs/toolkit";
 const VotingPanelSlice = createSlice({
     name:"votingPanel",
     initialState:{
-        Voting:[]
+        Voting:[
+       
+        ]
     },
     reducers:{
         addVoting:(state,action)=>{
-            Voting.push(action.payload)
+            state.Voting.push(action.payload);
         }
     }
 })
