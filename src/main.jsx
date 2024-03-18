@@ -6,6 +6,8 @@ import { Provider } from 'react-redux'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Login from './components/Login.jsx'
 import Register from './components/Register.jsx'
+import VotingSetup from './components/Admin/VotingSetup.jsx'
+import Store from './components/utils/Store.js'
 
  const route = createBrowserRouter([
   {
@@ -19,17 +21,21 @@ import Register from './components/Register.jsx'
       {
         path:"register",
         element:<Register/>
+      },
+      {
+        path:"/voting",
+        element:<VotingSetup/>
       }
     ]
   }
  ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
 
+ <Provider store={Store}>
   <RouterProvider router={route}>
     <App />
     </RouterProvider>
-   
-  </React.StrictMode>,
+    </Provider>
+
 )
