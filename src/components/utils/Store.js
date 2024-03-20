@@ -4,7 +4,7 @@ import VotingPanelSlice from "./VotingPanelSlice"
 
 const Store =  configureStore({
     reducer:{
-        voting:VotingPanelSlice
+        vote:VotingPanelSlice
     }
 })
 

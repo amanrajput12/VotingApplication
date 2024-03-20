@@ -6,7 +6,7 @@ const VotingPanelSlice = createSlice({
     name:"votingPanel",
     initialState:{
         Voting:[
-       
+          
         ]
     },
     reducers:{

@@ -10,6 +10,7 @@ import VotingSetup from './components/Admin/VotingSetup.jsx'
 import Store from './components/utils/Store.js'
 
 import Votingoption from './components/Admin/Votingoption.jsx'
+import VotingPage from './components/Admin/VotingPage.jsx'
 
  const route = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ import Votingoption from './components/Admin/Votingoption.jsx'
           {
             path:"addvote",
             element:<Votingoption/>
+          },
+          {
+            path:"voting",
+            element:<VotingPage/>
           }
         ]
       }
