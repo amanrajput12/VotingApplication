@@ -11,6 +11,8 @@ import Store from './components/utils/Store.js'
 
 import Votingoption from './components/Admin/Votingoption.jsx'
 import VotingPage from './components/Admin/VotingPage.jsx'
+import Dashboard from './components/Dashboard.jsx'
+import Vote from './components/Vote.jsx'
 
  const route = createBrowserRouter([
   {
@@ -26,6 +28,10 @@ import VotingPage from './components/Admin/VotingPage.jsx'
         element:<Register/>
       },
       {
+        path:"dashboard",
+        element:<Dashboard/>
+      },
+      {
         path:"/vote",
         element:<VotingSetup/>,
         children:[
@@ -36,6 +42,10 @@ import VotingPage from './components/Admin/VotingPage.jsx'
           {
             path:"voting",
             element:<VotingPage/>
+          },
+          {
+            path:"votingPortal",
+            element:<Vote/>
           }
         ]
       }

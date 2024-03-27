@@ -1,10 +1,12 @@
 
 import {configureStore } from "@reduxjs/toolkit"
 import VotingPanelSlice from "./VotingPanelSlice"
+import UserSlice from "./UserSlice"
 
 const Store =  configureStore({
     reducer:{
-        vote:VotingPanelSlice
+        vote:VotingPanelSlice,
+        user:UserSlice
     }
 })
 
